@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
-  User: nestorsalinas
+  User.User: nestorsalinas
   Date: 6/4/18
   Time: 12:58 AM
   To change this template use File | Settings | File Templates.
@@ -15,13 +15,18 @@
 <body>
 <%@ include file="../partials/navbar.jsp"%>
 
-<div class="container">
-    <h1>View all</h1>
+    <h1 class="text-center container">View all</h1>
+<div class="row mt-5">
+    <div class = "container-fluid d-flex flex-wrap">
 
-    <c:forEach var="ad" items="${ads}">
-        <h1>${ad.title}</h1>
-        <p>${ad.description}</p>
-    </c:forEach>
+<c:forEach var="ad" items="${ads}">
+    <div class="container-fluid d-flex flex-wrap">
+                <h5 >${ad.title}</h5>
+                <p >${ad.description}</p>
+                <a href="/ads" class="btn btn-primary col-4">view more</a>
+    </div>
+</c:forEach>
+    </div>
 </div>
 </body>
 </html>
