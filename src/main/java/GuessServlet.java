@@ -24,7 +24,7 @@ public class GuessServlet extends HttpServlet{
         String message;
 
         if(userGuess == n){
-            message = "you won!";
+            message = "GREAT JOB!";
         } else if (userGuess > n){
             message = "try a lower digit!";
         } else {
