@@ -1,6 +1,6 @@
 USE ad_lister_db;
 
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS ads;
 
 
@@ -20,6 +20,4 @@ title VARCHAR(240) NOT NULL,
 description TEXT NOT NULL,
 PRIMARY KEY (id),
 
-FOREIGN (user_id) REFERENCES users(id)
-  ON DELETE CASCADE
 );

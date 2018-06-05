@@ -10,10 +10,10 @@
 <html>
 <head>
     <title>Title</title>
-    <%@include file="../partials/head.jsp"%>
+    <%@include file="/WEB-INF/partials/head.jsp"%>
 </head>
 <body>
-<%@ include file="../partials/navbar.jsp"%>
+<%@ include file="/WEB-INF/partials/navbar.jsp"%>
 
     <h1 class="text-center container">View all</h1>
 <div class="row mt-5">

@@ -1,9 +1,11 @@
 package dao;
 
-import Ad.Ad;
+import models.Ad;
 
 import java.util.List;
 
 public interface Ads {
     List<Ad> all();
+
+    Long insert(Ad ad);
 }

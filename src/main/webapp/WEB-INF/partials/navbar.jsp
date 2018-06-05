@@ -5,7 +5,7 @@
             <a class="navbar-brand" href="/ads">Nestor's list</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login.jsp">Login now</a></li>
+            <li><a href="/WEB-INF/login.jsp">Login now</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

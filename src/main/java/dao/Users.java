@@ -1,7 +1,10 @@
 package dao;
 
-public interface Users {
+import models.User;
 
-    User findByUsername(String username);
+import java.util.List;
+
+public interface Users {
+    List<User> all();
     Long insert(User user);
 }

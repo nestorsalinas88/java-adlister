@@ -1,4 +1,4 @@
-package Ad;
+package models;
 
 public class Ad {
     private long id;
