@@ -18,7 +18,7 @@ public class AdsServlet extends HttpServlet{
 
         req.setAttribute("ads", DaoFactory.getAdsDao().all());
 
-        req.getRequestDispatcher("/WEB-INF/register.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(req,resp);
     }
 
 

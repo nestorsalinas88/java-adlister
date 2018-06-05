@@ -10,7 +10,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Enter your info!</h1>
-        <form action="/register" method="post">
+        <form action="WEB-INF/register.jsp" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" class="form-control">
@@ -20,11 +20,11 @@
                 <input type="text" id="email" name="email" class="form-control">
             </div>
             <div class="form-group">
-                <label for="password">Email</label>
+                <label for="password">password</label>
                 <input type="password" id="password" name="password" class="form-control">
             </div>
             <div class="form-group">
-                <label for="confirm_password">Email</label>
+                <label for="confirm_password">confirm password</label>
                 <input type="password" id="confirm_password" name="confirm_password" class="form-control">
             </div>
             <input type="submit" class="btn btn-primary btn-block">

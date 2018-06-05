@@ -15,9 +15,9 @@ public class MySQLAdsDao implements Ads{
         try{
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/movies_db?serverTimezone=UTC&useSSL=false",
-                    "movies_user",
-                    "password"
+                    "",
+                    "",
+                    ""
             );
 
         } catch (SQLException e){
