@@ -9,6 +9,9 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <name> ADlister project</name>
+    <description>sample spring adlister</description>
+
     <build>
         <plugins>
             <plugin>
