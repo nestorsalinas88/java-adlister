@@ -13,6 +13,7 @@
 <body>
 
     <h1>Good to see you again ${username} </h1>
+    <h1>Keep counting ${counter} </h1>
 
 </body>
 </html>

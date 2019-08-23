@@ -10,11 +10,11 @@
 <%! boolean action = true; %>
 <%
 
-    action = (request.getParameter("username").equalsIgnoreCase("admin"));
+    action = (request.getParameter("username") != null && request.getParameter("username").equals("admin@gmail.com"));
     action = (request.getParameter("password") != null && request.getParameter("password").equals("pass123"));
 
     if (action) {
-        response.sendRedirect("profile.jsp");
+        response.sendRedirect("profile.jsp ");
     }
 
 %>
