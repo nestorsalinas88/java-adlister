@@ -2,7 +2,7 @@
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Please Log In" />
+        <jsp:param name="title" value="LOG IN" />
     </jsp:include>
 </head>
 <body>
