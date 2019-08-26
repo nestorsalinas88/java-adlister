@@ -3,6 +3,7 @@ package dao;
 import com.mysql.cj.jdbc.Driver;
 import config.Config;
 import model.Ad;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ public class MySQLAdsDao implements Ads{
         try {
             connection = DriverManager.getConnection(
                     config.getUrl(),
-                    config.getUser(),
+                    config.getUsername(),
                     config.getPassword()
             );
         }catch(SQLException e){
@@ -24,7 +25,7 @@ public class MySQLAdsDao implements Ads{
     }
 
 
-
+// fetching query
     @Override
     public List<Ad> all(){
         try{
@@ -36,6 +37,27 @@ public class MySQLAdsDao implements Ads{
         }
 
     }
+
+//    creating array for query
+    private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
+        List<Ad> ads = new ArrayList<>();
+        while (rs.next()) {
+            ads.add(extractAd(rs));
+        }
+        return ads;
+    }
+
+
+//    arrainging the array's details in the Ad object
+    private Ad extractAd(ResultSet rs) throws SQLException {
+        return new Ad(
+                rs.getInt("id"),
+                rs.getString("title"),
+                rs.getString("description"),
+                rs.getString("category")
+        );
+    }
+
 
     @Override
     public Long insert(Ad ad) {
@@ -60,22 +82,7 @@ public class MySQLAdsDao implements Ads{
                 + "'" + ad.getCategory() + "')";
     }
 
-    private Ad extractAd(ResultSet rs) throws SQLException {
-        return new Ad(
-                rs.getInt("id"),
-                rs.getString("title"),
-                rs.getString("description"),
-                rs.getString("category")
-        );
-    }
 
-    private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
-        List<Ad> ads = new ArrayList<>();
-        while (rs.next()) {
-            ads.add(extractAd(rs));
-        }
-        return ads;
-    }
 
 
 }
