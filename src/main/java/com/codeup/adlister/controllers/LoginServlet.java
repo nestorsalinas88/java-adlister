@@ -10,7 +10,7 @@ import java.io.IOException;
 @WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("user") != null) {
+        if (request.getSession().getAttribute("username") != null) {
             response.sendRedirect("/profile");
             return;
         }
@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 
         if (validAttempt) {
             // TODO: store the logged in user object in the session, instead of just the username
-            request.getSession().setAttribute("user", username);
+            request.getSession().setAttribute("username", username);
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/login");
